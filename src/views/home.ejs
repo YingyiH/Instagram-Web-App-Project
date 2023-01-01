@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home page</title>
+</head>
+<body>
+    <ul >
+            <button id="homeicon">
+                <a href="/">
+                    <img id="logo" src="Instagram-IG-Logo.png" width=170>
+                </a>
+            </button>
+            <input id="search" type="text" placeholder="Search..." height=50 width=120>
+            <button id="icon">
+                <img src="ui1.png" alt="icon" width="40px">
+            </button>
+            <button id="icon">
+                <img src="ui2.png" alt="icon" width="40px">
+            </button>
+    </ul>
+    <p></p>
+    <section class="users" >
+        <!-- FOR LOOP -->
+        <% database.forEach(function(user){ %>
+            <div id="user">
+                <a href="/feed?username=<%= user.username %>">
+                    <img id="userimage" src="/photos/<%= user.username %>/profile.jpeg" width=200 height=300 />
+                </a>
+                <form id="upload" action="/images" enctype="multipart/form-data" method="post">
+                    <input id="<%= user.username %>" type="file" name="<%= user.username %>" onchange="this .form.submit()"></input>
+                </form>
+                <a id="username"><%= user.username %></a>
+            </div>
+        <% }); %>
+    </section>
+</body>
+</html>
+
+<style>
+    ul {
+        display: flex;
+        align-items: center; 
+        display: flex; 
+        flex-direction: row;
+        margin-right: 20px;
+    }
+    #homeicon {
+        border: none;
+        background:none;
+    }
+    #homeicon:hover {
+        opacity: 0.5
+    }
+    #search {
+        border: none;
+        border-radius: 5px 5px 5px 5px;
+        background: #E9E9E9;
+        padding: 0.35em 0.75em;
+        font-size: 1.05em;
+        line-height: nor;
+        margin-left:auto;
+        margin-right: 10px
+    }
+    #icon {
+        border: none;
+        background:none;
+        width: 45px;
+        height: 45px;
+        padding: 0;
+        border-radius: 6px
+    }
+    #icon:hover {
+        opacity: 0.5
+    }
+    
+    p {
+        background-color: rgb(173, 184, 175);
+        height: 3px;
+        border-radius:2px;
+        border-width: 5px;
+        margin-left: 20px;
+        margin-right: 20px
+    }
+    .users {
+        display: flex;
+        flex-direction: row;
+        margin-left: 70px
+    }
+    #user {
+        display: flex;
+        margin-right: 30px;
+        flex-direction: column
+    }
+    #userimage {
+        object-fit:cover;
+        border-radius: 9px
+    }
+    #userimage:hover {
+        width: 203px;
+        height: 306px;
+        filter: blur(5px);
+        position:relative;
+    }
+    #upload {
+        display: flex;
+        flex-direction: column;
+    }
+    #submit {
+        width: 30%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-left: 20%;
+    }
+    #username {
+        position: absolute;
+        color: white;
+        margin-top:20px;
+        margin-left:15px;
+        font-size: 1.7rem;
+    }
+    
+</style>

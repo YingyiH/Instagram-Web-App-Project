@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul >
+        <button id="homeicon">
+            <a href="/">
+                <img id="logo" src="Instagram-IG-Logo.png" width=170>
+            </a>
+        </button>
+        <input id="search" type="text" placeholder="Search..." height=50 width=120>
+        <button id="icon">
+            <img src="ui1.png" alt="icon" width="40px">
+        </button>
+        <button id="icon">
+            <img src="ui2.png" alt="icon" width="40px">
+        </button>
+    </ul>
+    <p class="line"></p>
+    <div class="content">
+        <img id="youMadeIt" src="you_made_it.jpeg" alt="icon" width="600px">
+        <p id="text">Upload file successfully!</p>
+        <a href="/">
+            <button id="homepage">Go back to Home page</button>
+        </a>
+    </div>
+</body>
+</html>
+
+<style>
+    ul {
+        display: flex;
+        align-items: center; 
+        display: flex; 
+        flex-direction: row;
+        margin-right: 20px;
+    }
+    #homeicon {
+        border: none;
+        background:none;
+    }
+    #homeicon:hover {
+        opacity: 0.5
+    }
+    #search {
+        border: none;
+        border-radius: 5px 5px 5px 5px;
+        background: #E9E9E9;
+        padding: 0.35em 0.75em;
+        font-size: 1.05em;
+        line-height: nor;
+        margin-left:auto;
+        margin-right: 10px
+    }
+    #icon {
+        border: none;
+        background:none;
+        width: 45px;
+        height: 45px;
+        padding: 0;
+        border-radius: 6px
+    }
+    #icon:hover {
+        opacity: 0.5
+    }
+    
+    .line {
+        background-color: rgb(173, 184, 175);
+        height: 3px;
+        border-radius:2px;
+        border-width: 5px;
+        margin-left: 20px;
+        margin-right: 20px
+    }
+    .content {
+        margin-left: 300px;
+    }
+
+    #text {
+        margin-left: 300px;
+        font-size: 2rem;
+    }
+
+    #homepage {
+        text-align: center;
+        margin-top: 1rem;
+        margin-left: 600px;
+        border: none;
+        font-size: 1rem;
+        width: 250px;
+        height: 70px;
+        border-radius: 6px;
+    }
+
+    #homepage:hover {
+        background-color:rgb(104, 104, 104);
+        color:aliceblue;
+    }
+</style>
