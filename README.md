@@ -5,7 +5,7 @@ A Instagram imitation web app project to practice full-stack development
   Yingyi He
 
 ## Description
-This project is to practice the full-stack development skill with node.js. It remains these functions:
+This project is to practice the full-stack development skill with node.js, Javascript, EJS, and CSS. It remains these functions:
 
   - Default Home Page
   
